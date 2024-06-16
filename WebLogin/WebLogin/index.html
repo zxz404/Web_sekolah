@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS PWD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo">
+        <img src="./gambar/MEKANIK.png"><span>SMK MEKANIK CIBINONG</span></a>
+      <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#fasilitas">Fasilitas</a></li>
+        <li><a href="#Contacts">Contacts</a></li>
+      </ul>
+
+      <div class="top-btn">
+        <button  id="toggleButton" class="h-btn">Profile</button>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="main-content">
+        <h4>Selamat datang</h4>
+        <p>Di website sekolah kami! Kami menawarkan pendidikan berkualitas dengan kurikulum inovatif, fasilitas modern, dan guru berdedikasi. Temukan informasi lengkap tentang program akademik, kegiatan ekstrakurikuler, dan prestasi kami. Bergabunglah dan jadi bagian dari komunitas inspiratif kami!</p>
+        <div class="main-btn">
+          <a href="#form-pendaftaran" class="btn">Daftar</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about" id="about">
+      <div class="container">
+        <h2>ABOUT</h2>
+        <div class="about-content">
+          <div class="description">
+            <p>SMK Mekanik Cibinong berdiri pada tahun 1999 dengan pendiri Hj. Siti Cholifah, S.pd dan H. Igun Sumarno, S.pd.MM. Seiring perkembangan pendidikan, maka semakin tahun jumlah siswa SMK Mekanik Cibinong pun terus bertambah dan menjadikan SMK Mekanik Cibinong semakin maju dan berkembang. Keberadaan SMK Mekanik Cibinong di dukung oleh dunia usaha dan dunia industri baik dalam pembelajarannya maupun penyerapaan lulusannya. Pembelajaran teori dan praktik tidak hanya di lakujan dalam kelas, tetapi dilakukan juga di dunia industri melalui praktek kerja industri di perusahaan yang relevan.</p>
+          </div>
+          <div class="about-image">
+            <img src="./gambar/MEKANIK.png" alt="Logo SMK MEKANIK CIBINONG" class="flip-image">
+          </div>
+        </div>
+
+        <div class="profile-card" style="display: none;"> <!-- Awalnya tersembunyi -->
+          <div class="profile-img">
+            <img src="./gambar/profilebg.jpg" alt="Foto Profil">
+            <div class="profile-info">
+              <h2>Pengembang Website</h2>
+              <table >
+                  <tr>
+                    <td>Nama </td><td>:</td>
+                    <td>Fatkhan Afandi</td>
+                  </tr>
+
+                  <tr>
+                    <td>Kelas</td><td>:</td>
+                    <td>Teknik Informatika 2A</td>
+                  </tr>
+                  <tr>
+                    <td>NIM</td><td>:</td>
+                    <td>2307411003</td>
+                  </tr>
+              </table>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="./gambar/ak2.jpg" alt="Jurusan Akuntansi">
+            <h3>Akuntansi</h3>
+            <p>Program ini mengajarkan dasar-dasar akuntansi, pelaporan keuangan, dan perpajakan.</p>
+          </div>
+          <div class="card">
+            <img src="./gambar/mm2.JPG" alt="Jurusan Multimedia">
+            <h3>Multimedia</h3>
+            <p>Fokus pada desain grafis, animasi, dan produksi media digital.</p>
+          </div>
+          <div class="card">
+            <img src="./gambar/tkj1.JPG" alt="Jurusan TKJ">
+            <h3>Teknik Komputer dan Jaringan</h3>
+            <p>Mengajarkan keterampilan dalam membangun dan mengelola jaringan komputer.</p>
+          </div>
+          <div class="card">
+            <img src="./gambar/tkr1.jpg" alt="Jurusan TKR">
+            <h3>Teknik Kendaraan Ringan</h3>
+            <p>Informasi umum tentang visi, misi, dan sejarah sekolah.</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="fasilitas" id="fasilitas">
+
+        <div class="fasilitas-container">
+          <h2>Fasilitas Sekolah</h2>
+          <div class="fasilitas-item">
+            <div class="fasilitas-image">
+              <img src="./gambar/fasilitas1.JPG" alt="Fasilitas Sekolah1">
+            </div>
+            <div class="fasilitas-description">
+              <p>Kami memiliki lapangan futsal dan basket yang luas serta dilengkapi dengan fasilitas modern. Selain itu, kami menyediakan ruang ganti yang bersih dan nyaman untuk kenyamanan Anda sebelum dan sesudah bermain. Tim kebersihan kami selalu memastikan bahwa semua fasilitas ini dalam kondisi terbaik untuk memberikan pengalaman bermain yang maksimal.</p>
+            </div>
+          </div>
+          <div class="fasilitas-item reverse">
+            <div class="fasilitas-image">
+              <img src="./gambar/fasilitas2.jpg" alt="Fasilitas Sekolah2">
+            </div>
+            <div class="fasilitas-description">
+              <p>Kami memiliki ruang komputer yang dilengkapi dengan perangkat modern dan koneksi internet cepat. Ruang ini dirancang untuk mendukung proses pembelajaran teknologi informasi dan komunikasi. Selain itu, kami juga menyediakan akses ke berbagai software dan alat yang dibutuhkan untuk kegiatan belajar mengajar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="form-pendaftaran">
+        <div class="form-container">
+          <h2>Formulir Pendaftaran Siswa Baru</h2>
+          <form id="registrationForm" method="POST">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required>
+    
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required></textarea>
+            <label for="tanggal">Tanggal Lahir:</label>
+            <input name="Tanggal" type="date" >
+    
+            <label for="jurusan">Jurusan Pilihan:</label>
+            <select id="jurusan" name="jurusan" required>
+              <option value="Akuntansi">Akuntansi</option>
+              <option value="Multimedia">Multimedia</option>
+              <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+              <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
+            </select>
+    
+            <button type="submit">Kirim Pendaftaran</button>
+          </form>
+        </div>
+      </section>
+      
+    
+    <footer class="footer" id="Contacts">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h3>SMK Mekanik Cibinong</h3>
+          <p> FRX6+489, Jl. Raya Sukahati, Sukahati,</p>
+          <p>Kabupaten Bogor, Jawa Barat 16913</p>
+          <p>Telp: (021) 87782345</p>
+        </div>
+        <div class="footer-middle">
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="fasilitas">Fasilitas</a></li>
+            <li><a href="Contacts">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h3>Ikuti Kami</h3>
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@smkmekanikcibinong1603" target="_blank"><ion-icon name="logo-youtube"></ion-icon><p>Youtube</p></a>
+            <a href="https://web.facebook.com/smkmekanikcibinong/?_rdc=1&_rdr" target="_blank"><ion-icon name="logo-facebook"></ion-icon>Facebook</a>
+            <a href="https://www.instagram.com/smkmekanik.cbn/" target="_blank"><ion-icon name="logo-instagram"></ion-icon><p>Instagram</p></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Fatkhan Afandi.</p>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggleButton");
+    const profileCard = document.querySelector(".profile-card");
+
+    toggleButton.addEventListener("click", () => {
+      if (profileCard.style.display === "none" || profileCard.style.display === "") {
+        profileCard.style.display = "block";
+        toggleButton.textContent = "Hide Profile";
+        alert("Profil ditampilkan"); // Menampilkan alert bahwa profil ditampilkan
+        // document.write("Profil ditampilkan."); // Menulis teks "Profil ditampilkan." ke dalam dokumen di konten halaman
+      
+      } else {
+        profileCard.style.display = "none";
+        toggleButton.textContent = "Profile";
+      }
+    });
+  });
+  
+</script>
+ </body>
+</html>

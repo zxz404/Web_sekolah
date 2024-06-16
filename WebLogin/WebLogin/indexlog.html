@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="stylelog.css" />
+  </head>
+  <body>
+    <div class="top">
+      <h2>Selamat datang, Silahkan login terlebih dahulu</h2>
+    </div>
+    <div class="logimage">
+      <img src="./gambar/MEKANIK.png" alt="Logo SMK MEKANIK CIBINONG" class="flipgambar" />
+    </div>
+    <div class="login-container">
+      <h2>LOGIN</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" placeholder="Username" id="username" required />
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" id="password" required />
+          <a href="#">Forget your password</a>
+        </div>
+        <button type="submit">LOGIN</button>
+        <p id="error-message" class="error-message"></p>
+      </form>
+    </div>
+
+    <script>
+      // Inisialisasi variabel
+      let passwordAttempts = 0; // Variabel untuk menghitung jumlah percobaan password
+      const maxAttempts = 5; // Jumlah maksimum percobaan yang diizinkan
+      const validUsername = "fatkhan"; // Username yang valid untuk login
+      const validPassword = "12345"; // Password yang valid untuk login
+
+      // Fungsi untuk menangani login
+      function handleLogin(event) {
+        event.preventDefault(); // agar window tidak reload
+
+        // Mengambil nilai username dan password dari input
+        const username = document.getElementById("username").value.toLowerCase();
+        const password = document.getElementById("password").value.toLowerCase();
+        const errorMessage = document.getElementById("error-message");
+
+        // Melakukan pengecekan terhadap username dan password
+        while (passwordAttempts < maxAttempts) {
+          if (username === validUsername && password === validPassword) {
+            window.location.href = "index.html"; // maasuk ke halaman web sekolah jika login beerhasil
+            return; // Keluar dari fungsi setelah login berhasil
+          } else {
+            passwordAttempts++;
+            if (username !== validUsername && password !== validPassword) {
+              errorMessage.innerText = "Nama dan Password yang anda masukan salah!!"; // Menampilkan pesan kesalahan untuk username dan password yang salah
+            } else if (username !== validUsername) {
+              errorMessage.innerText = "Nama yang anda masukan salah!!"; // Menampilkan pesan kesalahan untuk username yang salah
+            } else if (password !== validPassword) {
+              if (passwordAttempts >= maxAttempts) {
+                window.location.href = "erorlandingpage.html"; // masuk ke halaman error jika terlalu banyak percobaan
+                return; // Keluar dari fungsi setelah terlalu banyak percobaan
+              } else {
+                errorMessage.innerText = `Password yang anda masukan salah! Anda memiliki ${maxAttempts - passwordAttempts} kesempatan lagi.`; // Menampilkan pesan kesalahan untuk password yang salah
+              }
+            }
+            return; // Keluar dari loop saat kondisi salah
+          }
+        }
+      }
+      // Menetapkan fungsi yang akan dijalankan saat formulir dikirimkan
+      document.getElementById("loginForm").addEventListener("submit", handleLogin);
+    </script>
+  </body>
+</html>

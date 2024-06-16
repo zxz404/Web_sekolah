@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Massage Kesalahan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background-color: #fff3f3fa;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);
+    }
+    .content-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content-img img {
+      height: 50vh;
+      margin: 20px;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 20px;
+    }
+    .description {
+      margin-top: 20px;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+    .h-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+      transition: background-position 0.5s ease;
+      background-size: 500% 400%;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+    }
+    .h-btn:hover {
+      transition: all 0.3s ease-in-out;
+      background-position: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="content-img">
+      <img src="./gambar2/gambar1.png" alt="Gambar Kesalahan" />
+      <div class="text-container">
+        <h2>Terjadi Kesalahan!!!..</h2>
+        <p>Opss Sepertinya anda bukan pemilik akun ini...</p>
+      </div>
+    </div>
+    <div class="btn">
+      <button id="toggleButton" class="h-btn">Try Again</button>
+    </div>
+  </div>
+</body>
+<script>
+  document.getElementById('toggleButton').addEventListener('click', function(){
+    window.location = 'indexlog.html'
+  });
+</script>
+</html>
